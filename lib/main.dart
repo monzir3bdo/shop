@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/routes/routes.dart';
 import 'package:shop/view/screens/welcome_screen.dart';
 import 'package:get/get.dart';
 
@@ -16,14 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeScreen(),
-      initialRoute: '/WelcomeScreen',
-      getPages: [
-        GetPage(
-          name: '/WelcomeScreen',
-          page: () => const WelcomeScreen(),
-        ),
-      ],
+      initialRoute: AppRoute.welcome,
+      getPages: AppRoute.routes,
     );
   }
 }
